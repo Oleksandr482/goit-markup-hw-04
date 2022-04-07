@@ -140,6 +140,14 @@ p {
 /* Main */
 .hero {
   background-color: var(--primary-bg-color);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/bg_hero_img.jpg);
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1600px;
+  height: 600px;
   padding: 200px 0;
   text-align: center;
 }
@@ -179,7 +187,8 @@ p {
 
 .specifics-list,
 .activity-list,
-.team-list {
+.team-list,
+.regular-customers-list {
   display: flex;
 }
 
@@ -189,6 +198,14 @@ p {
 
 .specifics-list .item:not(:last-child) {
   margin-right: 30px;
+}
+
+.specifics-bg {
+  width: 270px;
+  height: 120px;
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .title-specifics {
@@ -202,7 +219,8 @@ p {
 }
 
 .title-activity,
-.team-title {
+.team-title,
+.regular-customers-title {
   margin-bottom: 50px;
 
   font-weight: 700;
@@ -217,7 +235,8 @@ p {
 }
 
 .team,
-.activity {
+.activity,
+.regular-customers {
   padding: 94px 0;
 }
 
@@ -262,6 +281,25 @@ p {
   color: var(--title-text-colot);
   font-weight: 500;
   font-size: 16px;
+}
+/* Постійні клієнти */
+.regular-customers-list .item {
+  width: calc((100%-150px) / 6);
+}
+
+.item .box {
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.item .box:hover,
+.item .box:focus {
+  border: 1px solid #2196f3;
+}
+
+.regular-customers-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Футер */
@@ -380,4 +418,10 @@ img {
 .projects-link {
   text-decoration: none;
   color: var(--primary-text-color);
+}
+
+.projects-box:hover,
+.projects-box:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
